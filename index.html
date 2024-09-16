@@ -1,156 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Options</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f8ff;
-        }
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .pricing-plan {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            width: 300px;
-        }
-        .current-plan {
-            border: 2px solid #007bff;
-        }
-        .plan-name {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .plan-description {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .plan-price {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .plan-billing {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .plan-feature-highlight {
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 10px;
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .plan-includes {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .plan-features {
-            list-style-type: none;
-            padding: 0;
-        }
-        .plan-features li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .plan-features li::before {
-            content: "✓";
-            color: #007bff;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        .info-icon {
-            width: 16px;
-            height: 16px;
-            border: 1px solid #666;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #666;
-            margin-left: 5px;
-        }
-        .plan-more {
-            text-align: center;
-            color: #666;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Pricing Table</title>
+  <!-- Include Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="pricing-container">
-        <div class="pricing-plan current-plan">
-            <div class="plan-name">Foundation</div>
-            <div class="plan-description">For individuals starting out with automation.</div>
-            <div class="plan-price">$99 <span style="font-size: 24px;">USD/mo</span></div>
-            <div class="plan-billing">Billed Monthly</div>
-            <div class="plan-feature-highlight">100 automations/mo</div>
-            <div class="plan-includes">Includes:</div>
-            <ul class="plan-features">
-                <li>100+ automations <span class="info-icon">i</span></li>
-                <li>20+ private tutorials <span class="info-icon">i</span></li>
-                <li>Basic Workflows <span class="info-icon">i</span></li>
-                <li>Starter Templates <span class="info-icon">i</span></li>
-            </ul>
-            <div class="plan-more">+ 10 more</div>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl">
+    <!-- Foundation Plan -->
+    <div class="w-full transition-all duration-300 hover:border-blue-500 border border-gray-200 rounded-lg">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold">Foundation</h2>
+        <p class="text-gray-500">For individuals starting out with automation.</p>
+      </div>
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2">$99 <span class="text-xl font-normal">USD/mo</span></div>
+        <div class="text-sm text-gray-500 mb-4">Billed Monthly</div>
+        <div class="border rounded p-2 text-center mb-4">
+          100 automations/mo
         </div>
-
-        <div class="pricing-plan">
-            <div class="plan-name">Pro</div>
-            <div class="plan-description">For individuals automating their work</div>
-            <div class="plan-price">$999 <span style="font-size: 24px;">USD/mo</span></div>
-            <div class="plan-billing">Billed Monthly</div>
-            <div class="plan-feature-highlight">300 automations/mo</div>
-            <div class="plan-includes">Includes:</div>
-            <ul class="plan-features">
-                <li>300+ automations <span class="info-icon">i</span></li>
-                <li>Unlimited Tools <span class="info-icon">i</span></li>
-                <li>Multi-step Workflows <span class="info-icon">i</span></li>
-                <li>Template Gallery <span class="info-icon">i</span></li>
-                <li>Advanced Integrations <span class="info-icon">i</span></li>
-            </ul>
-            <div class="plan-more">+ 50 more</div>
-        </div>
-
-        <div class="pricing-plan">
-            <div class="plan-name">Advanced</div>
-            <div class="plan-description">For individuals benefiting from more sophisticated automations</div>
-            <div class="plan-price">$4999 <span style="font-size: 24px;">USD/mo</span></div>
-            <div class="plan-billing">Billed Monthly</div>
-            <div class="plan-feature-highlight">1000 automations/mo</div>
-            <div class="plan-includes">Includes:</div>
-            <ul class="plan-features">
-                <li>88+ Ready-to-use Automations <span class="info-icon">i</span></li>
-                <li>Unlimited Tools <span class="info-icon">i</span></li>
-                <li>Multi-step Workflows <span class="info-icon">i</span></li>
-                <li>Template Gallery <span class="info-icon">i</span></li>
-                <li>Multi-step Workflows <span class="info-icon">i</span></li>
-                <li>Multi-step Workflows <span class="info-icon">i</span></li>
-                <li>Multi-step Workflows <span class="info-icon">i</span></li>
-                <li>Multi-step Workflows <span class="info-icon">i</span></li>
-            </ul>
-            <div class="plan-more">+ 200 more</div>
-        </div>
+        <div class="font-semibold mb-2">Includes:</div>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <!-- Checkmark Icon -->
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">100+ automations</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">20+ private tutorials</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Basic Workflows</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Starter Templates</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+        </ul>
+      </div>
+      <div class="p-4">
+        <div class="w-full text-center text-sm text-gray-500">+ 10 more</div>
+      </div>
     </div>
+
+    <!-- Pro Plan -->
+    <div class="w-full transition-all duration-300 hover:border-blue-500 border border-gray-200 rounded-lg">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold">Pro</h2>
+        <p class="text-gray-500">For individuals automating their work</p>
+      </div>
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2">$999 <span class="text-xl font-normal">USD/mo</span></div>
+        <div class="text-sm text-gray-500 mb-4">Billed Monthly</div>
+        <div class="border rounded p-2 text-center mb-4">
+          300 automations/mo
+        </div>
+        <div class="font-semibold mb-2">Includes:</div>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">300+ automations</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Unlimited Tools</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Multi-step Workflows</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Template Gallery</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Advanced Integrations</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+        </ul>
+      </div>
+      <div class="p-4">
+        <div class="w-full text-center text-sm text-gray-500">+ 50 more</div>
+      </div>
+    </div>
+
+    <!-- Advanced Plan -->
+    <div class="w-full transition-all duration-300 hover:border-blue-500 border border-gray-200 rounded-lg">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold">Advanced</h2>
+        <p class="text-gray-500">For individuals benefiting from more sophisticated automations</p>
+      </div>
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2">$4999 <span class="text-xl font-normal">USD/mo</span></div>
+        <div class="text-sm text-gray-500 mb-4">Billed Monthly</div>
+        <div class="border rounded p-2 text-center mb-4">
+          1000 automations/mo
+        </div>
+        <div class="font-semibold mb-2">Includes:</div>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">88+ Ready-to-use Automations</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <!-- Add more features as needed -->
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Unlimited Tools</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <!-- Repeat for remaining features -->
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="flex-grow">Multi-step Workflows</span>
+            <span class="ml-1 w-4 h-4 rounded-full border border-gray-300 inline-flex items-center justify-center text-xs text-gray-500 flex-shrink-0">i</span>
+          </li>
+          <!-- Continue adding features -->
+        </ul>
+      </div>
+      <div class="p-4">
+        <div class="w-full text-center text-sm text-gray-500">+ 200 more</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
