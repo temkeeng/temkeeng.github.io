@@ -1,52 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pricing Plans</title>
-  <style>
-    .pricing-plan {
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .pricing-plan:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pricing-plan {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 22%;
+        }
+        .current-plan {
+            border: 2px solid #007bff;
+        }
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .plan-price {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .plan-features {
+            list-style-type: none;
+            padding: 0;
+        }
+        .plan-features li {
+            margin-bottom: 10px;
+        }
+        .plan-features li::before {
+            content: "✓";
+            color: #007bff;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="pricing-plan" id="foundation" onclick="redirectTo('foundationPage.html')">
-    <h2>Foundation</h2>
-    <p>For individuals starting out with automation.</p>
-    <p><strong>$99</strong> a month of work</p>
-    <ul>
-      <li>100+ automations</li>
-      <li>20+ private tutorials</li>
-      <li>100 automations/mo</li>
-    </ul>
-  </div>
-
-  <div class="pricing-plan" id="pro" onclick="redirectTo('proPage.html')">
-    <h2>Pro</h2>
-    <p>For individuals automating their work.</p>
-    <p><strong>$999</strong> USD/mo</p>
-    <ul>
-      <li>300 automations/mo</li>
-      <li>88+ Ready-to-use Automations</li>
-      <li>Unlimited Tools</li>
-    </ul>
-  </div>
-
-  <script>
-    function redirectTo(pageUrl) {
-      window.location.href = pageUrl;
-    }
-  </script>
-
+    <div class="pricing-container">
+        <div class="pricing-plan current-plan">
+            <div class="plan-name">Foundation</div>
+            <div class="plan-price">$99<span style="font-size: 16px;"> /month</span></div>
+            <ul class="plan-features">
+                <li>100+ automations</li>
+                <li>20+ private tutorials</li>
+                <li>100 automations/mo</li>
+            </ul>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">$999<span style="font-size: 16px;"> /month</span></div>
+            <ul class="plan-features">
+                <li>300 automations/mo</li>
+                <li>Unlimited Tools</li>
+                <li>Multi-step Workflows</li>
+            </ul>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-name">Advanced</div>
+            <div class="plan-price">$4999<span style="font-size: 16px;"> /month</span></div>
+            <ul class="plan-features">
+                <li>1000 automations/mo</li>
+                <li>Unlimited Tools</li>
+                <li>Multi-step Workflows</li>
+            </ul>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-name">Teams</div>
+            <div class="plan-price">$7950<span style="font-size: 16px;"> /month</span></div>
+            <ul class="plan-features">
+                <li>Business Done-for-you</li>
+                <li>Unlimited Tools</li>
+                <li>Multi-step Workflows</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
