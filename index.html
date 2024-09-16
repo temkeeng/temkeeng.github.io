@@ -14,7 +14,9 @@
         }
         .pricing-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -23,20 +25,43 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             padding: 20px;
-            width: 22%;
+            width: 300px;
         }
         .current-plan {
             border: 2px solid #007bff;
         }
         .plan-name {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: bold;
             margin-bottom: 10px;
+        }
+        .plan-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
         }
         .plan-price {
             font-size: 36px;
             font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .plan-billing {
+            font-size: 18px;
+            color: #666;
             margin-bottom: 20px;
+        }
+        .plan-feature-highlight {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .plan-includes {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
         .plan-features {
             list-style-type: none;
@@ -44,11 +69,31 @@
         }
         .plan-features li {
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
         .plan-features li::before {
             content: "✓";
             color: #007bff;
-            margin-right: 5px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .info-icon {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #666;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+        }
+        .plan-more {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -56,39 +101,55 @@
     <div class="pricing-container">
         <div class="pricing-plan current-plan">
             <div class="plan-name">Foundation</div>
-            <div class="plan-price">$99<span style="font-size: 16px;"> /month</span></div>
+            <div class="plan-description">For individuals starting out with automation.</div>
+            <div class="plan-price">$99 <span style="font-size: 24px;">USD/mo</span></div>
+            <div class="plan-billing">Billed Monthly</div>
+            <div class="plan-feature-highlight">100 automations/mo</div>
+            <div class="plan-includes">Includes:</div>
             <ul class="plan-features">
-                <li>100+ automations</li>
-                <li>20+ private tutorials</li>
-                <li>100 automations/mo</li>
+                <li>100+ automations <span class="info-icon">i</span></li>
+                <li>20+ private tutorials <span class="info-icon">i</span></li>
+                <li>Basic Workflows <span class="info-icon">i</span></li>
+                <li>Starter Templates <span class="info-icon">i</span></li>
             </ul>
+            <div class="plan-more">+ 10 more</div>
         </div>
+
         <div class="pricing-plan">
             <div class="plan-name">Pro</div>
-            <div class="plan-price">$999<span style="font-size: 16px;"> /month</span></div>
+            <div class="plan-description">For individuals automating their work</div>
+            <div class="plan-price">$999 <span style="font-size: 24px;">USD/mo</span></div>
+            <div class="plan-billing">Billed Monthly</div>
+            <div class="plan-feature-highlight">300 automations/mo</div>
+            <div class="plan-includes">Includes:</div>
             <ul class="plan-features">
-                <li>300 automations/mo</li>
-                <li>Unlimited Tools</li>
-                <li>Multi-step Workflows</li>
+                <li>300+ automations <span class="info-icon">i</span></li>
+                <li>Unlimited Tools <span class="info-icon">i</span></li>
+                <li>Multi-step Workflows <span class="info-icon">i</span></li>
+                <li>Template Gallery <span class="info-icon">i</span></li>
+                <li>Advanced Integrations <span class="info-icon">i</span></li>
             </ul>
+            <div class="plan-more">+ 50 more</div>
         </div>
+
         <div class="pricing-plan">
             <div class="plan-name">Advanced</div>
-            <div class="plan-price">$4999<span style="font-size: 16px;"> /month</span></div>
+            <div class="plan-description">For individuals benefiting from more sophisticated automations</div>
+            <div class="plan-price">$4999 <span style="font-size: 24px;">USD/mo</span></div>
+            <div class="plan-billing">Billed Monthly</div>
+            <div class="plan-feature-highlight">1000 automations/mo</div>
+            <div class="plan-includes">Includes:</div>
             <ul class="plan-features">
-                <li>1000 automations/mo</li>
-                <li>Unlimited Tools</li>
-                <li>Multi-step Workflows</li>
+                <li>88+ Ready-to-use Automations <span class="info-icon">i</span></li>
+                <li>Unlimited Tools <span class="info-icon">i</span></li>
+                <li>Multi-step Workflows <span class="info-icon">i</span></li>
+                <li>Template Gallery <span class="info-icon">i</span></li>
+                <li>Multi-step Workflows <span class="info-icon">i</span></li>
+                <li>Multi-step Workflows <span class="info-icon">i</span></li>
+                <li>Multi-step Workflows <span class="info-icon">i</span></li>
+                <li>Multi-step Workflows <span class="info-icon">i</span></li>
             </ul>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-name">Teams</div>
-            <div class="plan-price">$7950<span style="font-size: 16px;"> /month</span></div>
-            <ul class="plan-features">
-                <li>Business Done-for-you</li>
-                <li>Unlimited Tools</li>
-                <li>Multi-step Workflows</li>
-            </ul>
+            <div class="plan-more">+ 200 more</div>
         </div>
     </div>
 </body>
