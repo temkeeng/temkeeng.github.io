@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Plans</title>
+  <style>
+    .pricing-plan {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pricing-plan:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pricing-plan" id="foundation" onclick="redirectTo('foundationPage.html')">
+    <h2>Foundation</h2>
+    <p>For individuals starting out with automation.</p>
+    <p><strong>$99</strong> a month of work</p>
+    <ul>
+      <li>100+ automations</li>
+      <li>20+ private tutorials</li>
+      <li>100 automations/mo</li>
+    </ul>
+  </div>
+
+  <div class="pricing-plan" id="pro" onclick="redirectTo('proPage.html')">
+    <h2>Pro</h2>
+    <p>For individuals automating their work.</p>
+    <p><strong>$999</strong> USD/mo</p>
+    <ul>
+      <li>300 automations/mo</li>
+      <li>88+ Ready-to-use Automations</li>
+      <li>Unlimited Tools</li>
+    </ul>
+  </div>
+
+  <script>
+    function redirectTo(pageUrl) {
+      window.location.href = pageUrl;
+    }
+  </script>
+
+</body>
+</html>
